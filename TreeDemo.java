@@ -60,7 +60,7 @@ class BinarySearchTree {
         preOrderTraversal(root.left);
 
         //Traverse to the right node
-        preOrderTraversal(roo.right);
+        preOrderTraversal(root.right);
     }
 
     /*
@@ -68,6 +68,19 @@ class BinarySearchTree {
      */
     public void inOrderTraversal(Node root) {
         //implement me
+        if(root == null){
+            return;
+        }
+        
+        //Traverse to left most Node
+        inOrderTraversal(root.left);
+        
+        //Print current Node information
+        System.out.print(root.value + " ");
+        
+        //Traverse to right subtree
+        inOrderTraversal(root.right);
+
     }
 
     /*
