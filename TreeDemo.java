@@ -88,6 +88,17 @@ class BinarySearchTree {
      */
     public void postOrderTraversal(Node root) {
         //implement me
+        if (root == null){
+            return;
+        }
+        
+        //Traverse to left most node
+        postOrderTraversal(root.left);
+        //Traverse to right subtree
+        postOrderTraversal(root.right);
+        
+        //Process current Node
+        System.out.print(root.value + " ");
     }
 
     /*
