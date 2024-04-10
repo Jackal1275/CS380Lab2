@@ -143,7 +143,15 @@ class BinarySearchTree {
      */
     public int getMax(Node root) {
         //implement me
-        return 0;
+        if(root == null){
+            return -1;
+        }
+        
+        while(root.right != null){
+            getMin(root.right);
+        }
+            
+        return root.value;
     }
 
     /*
